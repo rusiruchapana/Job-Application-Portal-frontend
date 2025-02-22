@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +7,13 @@ import { Injectable } from '@angular/core';
 })
 export class JobService {
 
-  constructor() { }
+  private apiUrl = 'http://localhost:5297/api/Job';
+
+  constructor(private http: HttpClient) { }
+
+  getJobs(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
+  }
+
+
 }
