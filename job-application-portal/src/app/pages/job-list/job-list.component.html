@@ -1,1 +1,10 @@
-<p>job-list works!</p>
+<div class="container mt-4">
+  <h2>Available Jobs</h2>
+  <div class="list-group">
+    <a *ngFor="let job of jobs" class="list-group-item list-group-item-action">
+      <h5>{{ job.title }}</h5>
+      <p>{{ job.company }} - {{ job.location }}</p>
+      <p><strong>Salary:</strong> ${{ job.salary }}</p>
+    </a>
+  </div>
+</div>
