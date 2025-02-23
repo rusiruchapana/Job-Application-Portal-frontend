@@ -1,1 +1,18 @@
-<app-job-list></app-job-list>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/">Job Portal</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  
